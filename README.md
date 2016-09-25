@@ -4,6 +4,7 @@ Onsen API wrapper for Node.js
 
 ## Example
 
+``` javascript:onsen.js
 'use strict';
 
 var onsen = require('./onsen');
@@ -28,3 +29,4 @@ onsen.get('[list]で取得した番組名', (data) => {
 onsen.search('検索キーワード', (data) => {
 	console.log(data);
 });
+```
