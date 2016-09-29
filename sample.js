@@ -1,24 +1,56 @@
 'use strict';
 
-var onsen = require('./onsen');
+var Onsen = require('./onsen');
+var onsen = new Onsen();
+
 
 /**
  * 番組一覧の取得
  */
-onsen.list((data) => {
-	console.log(data);
+onsen.list(function(data) {
+	if(data !== null)
+		console.log(data);
+	else
+		console.log('null');
 });
 
 /**
  * 番組情報の取得
  */
-onsen.get('[list]で取得した番組名', (data) => {
-	console.log(data);
+onsen.get(function('listで取得した番組名', data) {
+	if(data !== null)
+		console.log(data);
+	else
+		console.log('null');
 });
 
 /**
  * 番組の検索
  */
-onsen.search('検索キーワード', (data) => {
-	console.log(data);
+onsen.search(function('検索ワード', data) {
+	if(data !== null)
+		console.log(data);
+	else
+		console.log('null');
 });
+
+/**
+ * レコメンドの取得
+ */
+onsen.recommends(function(data) {
+	if(data !== null)
+		console.log(data);
+	else
+		console.log('null');
+});
+
+/**
+ * トピックの取得
+ */
+onsen.topics(function(data) {
+	if(data !== null)
+		console.log(data);
+	else
+		console.log('null');
+});
+
