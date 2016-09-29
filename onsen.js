@@ -32,6 +32,7 @@ Onsen.prototype.list = function(callback) {
  * @param callback: コールバック関数
  */
 Onsen.prototype.get = function(name, callback) {
+	name = encodeURIComponent(name);
 	this.request(this.GET_URL+name, function(err, res, body) {
 		if(res.statusCode === 200  && err === null) {
 			var data = body.replace(/(callback\(|\);)/g, '');
@@ -48,6 +49,7 @@ Onsen.prototype.get = function(name, callback) {
  * @param callback: コールバック関数
  */
 Onsen.prototype.search = function(keyword, callback) {
+	keyword = encodeURIComponent(keyword);
 	this.request(this.SEARCH_URL+keyword, function(err, res, body) {
 		if(res.statusCode === 200  && err === null) {
 			var data = body.replace(/(callback\(|\);)/g, '');
