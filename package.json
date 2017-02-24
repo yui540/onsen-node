@@ -4,7 +4,7 @@
   "description": "声優ラジオサイト「音泉」の非公開APIモジュール",
   "main": "lib/onsen.js",
   "scripts": {
-    "complie": ""
+    "build": "coffee -o lib/ -c src"
   },
   "repository": {
     "type": "git",
