@@ -1,0 +1,29 @@
+{
+  "name": "onsen-node",
+  "version": "1.0.0",
+  "description": "声優ラジオサイト「音泉」の非公開APIモジュール",
+  "main": "lib/onsen.js",
+  "scripts": {
+    "complie": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuki540net/onsen-node.git"
+  },
+  "keywords": [
+    "音泉",
+    "声優",
+    "ラジオ",
+    "onsen-node"
+  ],
+  "author": "yuki540",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuki540net/onsen-node/issues"
+  },
+  "homepage": "https://github.com/yuki540net/onsen-node#readme",
+  "dependencies": {
+    "request": "^2.79.0",
+    "xmljson": "^0.2.0"
+  }
+}
