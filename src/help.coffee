@@ -19,3 +19,16 @@ module.exports =
 			_list.push data
 
 		return _list
+
+	##
+	# http通信
+	# @param url : URL
+	# @param fn  : コールバック関数
+	##
+	httpRequest: (url, fn) ->
+		request = require 'request'
+		request url, (err, res, body) =>
+			if res.statusCode is 200 and err is null
+				fn body
+			else
+				fn null

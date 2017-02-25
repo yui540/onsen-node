@@ -1,7 +1,6 @@
 class OnsenSearch
 	constructor: ->
 		@url     = require('../OnsenURL').SEARCH
-		@request = require 'request'
 		@help    = require '../help'
 
 	##
@@ -11,12 +10,12 @@ class OnsenSearch
 	##
 	search: (keyword, fn) ->
 		keyword = encodeURIComponent keyword
-		@request @url + keyword, (err, res, body) =>
-			if res.statusCode is 200 and err is null
-				data = @help.catJSONP body
-				data = JSON.parse data
-				data = data.result || []
-				fn data
+		@help.httpRequest @url + keyword, (jsonp) =>
+			if jsonp isnt null
+				json = @help.catJSONP jsonp
+				json = JSON.parse json
+				json = json.result || []
+				fn json
 			else
 				fn null
 

@@ -1,7 +1,6 @@
 class OnsenTopics
 	constructor: ->
 		@url     = require('../OnsenURL').TOPICS
-		@request = require 'request'
 		@xmljson = require 'xmljson'
 		@help    = require '../help'
 
@@ -10,10 +9,11 @@ class OnsenTopics
 	# @param fn : コールバック関数
 	##
 	getTopics: (fn) ->
-		@request @url, (err, res, xml) =>
-			if res.statusCode is 200 and err is null
-				@xmljson.to_json xml, (err, data) =>
-					fn @help.castArray data.rss.channel.item
+		@help.httpRequest @url, (xml) =>
+			if xml isnt null
+				@xmljson.to_json xml, (err, json) =>
+					json = @help.castArray json.rss.channel.item
+					fn json
 			else
 				fn null
 	
