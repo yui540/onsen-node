@@ -14,6 +14,11 @@ class OnsenInfo
 			if jsonp isnt null
 				json = @help.catJSONP jsonp
 				json = JSON.parse json
+
+				if json.error isnt undefined
+					fn null
+					return
+
 				fn json
 			else
 				fn null
