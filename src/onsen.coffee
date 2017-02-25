@@ -33,7 +33,7 @@ module.exports =
 	# @param keyword : 検索ワード
 	# @param fn      : コールバック関数
 	##
-	getSearch: (keyword, fn) ->
+	search: (keyword, fn) ->
 		OnsenSearch.search keyword, fn
 
 	##
