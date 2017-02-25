@@ -6,3 +6,6 @@ node_modules/
 
 # lib : トランスコンパイルのディレクトリ
 lib/
+
+# debug.coffee : デバッグ用ファイル
+debug.coffee
