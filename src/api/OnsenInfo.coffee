@@ -1,8 +1,7 @@
 class OnsenInfo
 	constructor: ->
-		@url     = require('../OnsenURL').GET_INFO
-		@request = require 'request'
-		@help    = require '../help'
+		@url  = require('../OnsenURL').GET_INFO
+		@help = require '../help'
 
 	##
 	# 番組情報の取得
@@ -11,10 +10,22 @@ class OnsenInfo
 	##
 	getInfo: (name, fn) ->
 		name = encodeURIComponent name
-		@request @url + name, (err, res, body) =>
-			if res.statusCode is 200 and err is null
-				data = @help.catJSONP body
-				fn JSON.parse data
+		@help.httpRequest @url + name, (jsonp) =>
+			if jsonp isnt null
+				json = @help.catJSONP jsonp
+				json = JSON.parse json
+				fn json
+			else
+				fn null
+
+	##
+	# 音声 or 動画ファイルのリンクを取得
+	##
+	getLink: (name, fn) ->
+		@getInfo name, (info) =>
+			if info isnt null
+				link = info.moviePath.pc
+				fn link
 			else
 				fn null
 
