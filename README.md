@@ -89,7 +89,7 @@ onsen.getRecommendTopics (list) ->
 ## CLI
 ### npm install
 ```
-npm install -g onsen-node
+sudo npm install -g onsen-node
 ```
 
 ### command
