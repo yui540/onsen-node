@@ -85,3 +85,40 @@ onsen.getRecommendTopics (list) ->
 	if list isnt null
 		console.log list
 ```
+
+## CLI
+### npm install
+```
+npm install -g onsen-node
+```
+
+### command
+ヘルプ
+```
+onsen -h
+```
+
+番組一覧
+```
+# 全ての曜日を表示
+onsen list 
+
+# 曜日ごとの一覧を表示
+onsen list 今日
+onsen list 月
+```
+
+番組の検索
+```
+onsen search 番組名
+```
+
+音声・動画ファイルのダウンロード
+```
+onsen download 番組名
+```
+
+番組情報
+```
+onsen info 番組名
+```
