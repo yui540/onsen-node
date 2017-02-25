@@ -4,8 +4,5 @@ node_modules/
 # .DS_Store
 .DS_Store
 
-# lib : トランスコンパイルのディレクトリ
-lib/
-
 # debug.coffee : デバッグ用ファイル
 debug.coffee
