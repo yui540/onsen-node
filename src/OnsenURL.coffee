@@ -1,4 +1,5 @@
 module.exports = 
+	TOP        : 'http://www.onsen.ag/'
 	DEFAULT    : 'http://onsen.ag/data/api/getDefaultInfo'
 	LIST       : 'http://www.onsen.ag/api/shownMovie/shownMovie.json'
 	GET_INFO   : 'http://www.onsen.ag/data/api/getMovieInfo/'

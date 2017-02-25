@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/yuki540net/onsen-node#readme",
   "dependencies": {
+    "cheerio-httpcli": "^0.6.11",
     "request": "^2.79.0",
     "xmljson": "^0.2.0"
   }
