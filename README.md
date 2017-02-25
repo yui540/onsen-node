@@ -100,25 +100,26 @@ onsen -h
 
 番組一覧
 ```
-# 全ての曜日を表示
 onsen list 
-
-# 曜日ごとの一覧を表示
 onsen list 今日
 onsen list 月
 ```
+![list](./picture/list.png)
 
 番組の検索
 ```
 onsen search 番組名
 ```
+![search](./picture/search.png)
 
 音声・動画ファイルのダウンロード
 ```
 onsen download 番組名
 ```
+![download](./picture/download.png)
 
 番組情報
 ```
 onsen info 番組名
 ```
+![info](./picture/info.png)
