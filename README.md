@@ -4,9 +4,9 @@
 - onsen-nodeについての紹介ページ
   - [Qiita - 声優ラジオサイト「音泉」APIモジュール](http://qiita.com/yuki540/items/a9bcafc0eafbd61d7bb6)
 - 開発者
-  - yuki540
-  - [Twitter - @eriri_jp](https://twitter.com/eriri_jp)
-  - [HP - yuki540.com](http://yuki540.com
+  - yui540
+  - [Twitter - @yui540](https://twitter.com/yui540)
+  - [HP - magical-girl.site](https://magical-girl.site/)
 
 ## Method
 - getList
